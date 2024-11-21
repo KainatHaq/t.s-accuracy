@@ -1,0 +1,181 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #1e1e1e;
+    background: linear-gradient(to right, #d2ecf4, #d7f9f3, #d4deff);
+    text-align: center;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Global font size adjustments */
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Heading style */
+  .heading {
+    font-family: 'Serif', serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: #0c0c0a;
+    margin-top: 8rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Header (WPM, CPM, Errors, Accuracy, Timer) container */
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* Individual stat containers (WPM, CPM, Errors, Accuracy, Timer) */
+  .timer, .errors, .accuracy, .cpm, .wpm {
+    background-color: #8cb0b9;
+      color: #fff;
+      height: 60px;
+      width: 120px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      justify-content: center;
+      align-items: center;
+      font-size: 17px;
+      line-height: 14.4px;
+      font-weight: 600;
+      transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Hiding WPM and CPM initially */
+  .cpm, .wpm {
+    display: none;
+  }
+  
+  /* Header text (WPM, CPM, Errors, Accuracy, Timer labels) */
+  .header_text {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #f8f8f8;
+    margin-bottom: 5px;
+  }
+  
+  /* Quote area */
+  .quote {
+    background-color: #afd0d5;
+    color: #350436;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  }
+  
+  /* Input area (text box) */
+  .input_area {
+    background-color: #e3e0ce;
+      color: #000;
+      height: 120px;
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 20px;
+      margin: 15px auto;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      resize: none;
+      transition: border-color 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for input field */
+  .input_area:focus {
+    outline: none;
+    border-color: #4db8ff;
+    box-shadow: 0 0 8px rgba(77, 184, 255, 0.5);
+  }
+  
+  /* Restart button */
+  .restart_btn {
+    display: none;
+    background-color: #234a49;
+    font-size: 1.8rem;
+    padding: 10px 20px;
+    border: none;
+    color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Restart button hover effect */
+  .restart_btn:hover {
+    background-color: #1b3a39;
+  }
+  
+  /* Typing text styling (correct and incorrect characters) */
+  .incorrect_char {
+    color: red;
+    text-decoration: underline;
+  }
+  
+  .correct_char {
+    color: darkgreen;
+  }
+  
+  /* Small screen responsiveness */
+  @media (max-width: 768px) {
+    .heading {
+        font-size: 3rem;
+    }
+  
+    .quote {
+        font-size: 1.8rem;
+        width: 90%;
+    }
+  
+    .input_area {
+        width: 80%;
+        font-size: 3rem;
+    }
+  
+    .header {
+        flex-direction: column;
+    }
+  
+    .timer, .errors, .accuracy, .cpm, .wpm {
+        width: 60px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+  
+    .restart_btn {
+        font-size: 1.6rem;
+    }
+  }
